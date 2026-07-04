@@ -152,39 +152,13 @@ git clone https://github.com/yourusername/agri-ai-platform.git
 cd agri-ai-platform
 ```
 
-**2. Create and activate a virtual environment**
-For Windows:
-```
-python -m venv venv
-venv\Scripts\activate
-```
-
-For macOS/Linux:
-```
-python3 -m venv venv
-source venv/bin/activate
-```
-
-**3. Install dependencies**
+**2. Install dependencies**
 Install all required Python packages using pip:
 ```
 pip install -r requirements.txt
 ```
 
-**4. Set up Environment Variables**
-Create a `.env` file in the root directory and add your API keys:
-```
-LLM_API_KEY=your_api_key_here
-WEATHER_API_KEY=your_weather_api_key
-```
-
-**5. Run the Streamlit App**
-Launch the application locally:
-```
-streamlit run app.py
-```
-
-**6. Access the App**
+**3. Access the App**
 Open your web browser and navigate to `http://localhost:8501`
 
 ---
