@@ -77,27 +77,6 @@ Our goal is to provide instant, affordable, and localized agricultural guidance 
 
 ---
 
-## Core Features
-
-### AI Chat Assistant
-* Supports Hindi, Marathi, English, and other regional languages
-* Answers questions about crop care, fertilizers, government schemes, irrigation, and pest control
-
-### Voice Recognition
-* Farmer speaks naturally (e.g., "My tomato leaves are turning yellow")
-* AI understands context and responds with actionable advice
-
-### Image Recognition
-* Farmer uploads crop image
-* AI detects diseases, nutrient deficiencies, or pest attacks
-* Returns a confidence score, possible causes, and recommended actions
-
-
-### Market Price Information
-* Provides nearby mandi prices, historical trends, and suggestions on when to sell
-
----
-
 ## Technology Stack
 
 ### Frontend & UI
