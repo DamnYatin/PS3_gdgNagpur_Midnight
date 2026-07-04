@@ -320,6 +320,12 @@ let mandis = [];
 let selectedCrop = null;
 let selectedMandi = null;
 
+// The base URL for your backend API.
+// If you host the backend on Render/PythonAnywhere, paste the URL here.
+// e.g., 'https://my-backend.onrender.com'
+// Leave it blank ('') if running locally where frontend and backend are on the same server.
+const API_BASE_URL = 'https://sumodip.pythonanywhere.com/';
+
 const introText = "मंडी तुलना मध्ये आपले स्वागत आहे. आधी तुमचे पीक निवडा, मग तुमची मंडई निवडा, आणि भाव तपासा बटण दाबा.";
 
 /* ---------------- ICONS (inline SVG, flat signboard style) ---------------- */
@@ -373,8 +379,8 @@ function buildMandiTiles(){
 async function loadData(){
   try {
     const [cropsRes, mandisRes] = await Promise.all([
-      fetch('/api/crops'),
-      fetch('/api/mandis'),
+      fetch(`${API_BASE_URL}/api/crops`),
+      fetch(`${API_BASE_URL}/api/mandis`),
     ]);
     if(!cropsRes.ok || !mandisRes.ok) throw new Error('backend unreachable');
     crops = await cropsRes.json();
@@ -412,7 +418,7 @@ async function runCompare(){
   const btn = document.getElementById('checkBtn');
   btn.disabled = true;
   try {
-    const url = `/api/compare?crop=${encodeURIComponent(selectedCrop)}&home_mandi=${encodeURIComponent(selectedMandi)}`;
+    const url = `${API_BASE_URL}/api/compare?crop=${encodeURIComponent(selectedCrop)}&home_mandi=${encodeURIComponent(selectedMandi)}`;
     const res = await fetch(url);
     if(!res.ok) throw new Error('compare failed: ' + res.status);
     const payload = await res.json();
