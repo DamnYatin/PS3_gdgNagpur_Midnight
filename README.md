@@ -156,4 +156,3 @@ pip install -r requirements.txt
 **3. Access the App**
 Open your web browser and navigate to `http://localhost:8501`
 
----
