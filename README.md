@@ -18,7 +18,6 @@ India has over **263 million people engaged in agriculture**, but many farmers s
 * Lack of timely crop disease diagnosis
 * Language barriers
 * Low digital literacy
-* Poor internet connectivity in rural regions
 
 Our goal is to provide instant, affordable, and localized agricultural guidance powered entirely by AI and accessible through multiple channels.
 
@@ -37,9 +36,7 @@ Our goal is to provide instant, affordable, and localized agricultural guidance 
 
 ---
 
-## Accessibility Models
-
-Instead of creating only a smartphone application, our solution works through multiple offline and online channels.
+## Accessibility Models (Future Implementations)
 
 ### 1. Web App
 * Voice input capabilities
