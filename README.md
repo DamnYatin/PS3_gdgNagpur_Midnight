@@ -108,13 +108,17 @@ Instead of creating only a smartphone application, our solution works through mu
 To ensure rapid development and seamless deployment during the hackathon, this project is built entirely in **Python**.
 
 ### Frontend & UI
-* HTML
-* CSS
-* JavaScript
+* Core: HTML5, Vanilla JavaScript, and Vanilla CSS. (No heavy frameworks like React or Tailwind are used, keeping it lightweight and fast)
+* Styling: CSS3 Custom Properties (variables), CSS Grid for the layout, and keyframe animations for the pulsating buttons
+* **Vercel:** For frontend deployment
+
 
 ### Backend & Core Logic
 * **Python 3.10+:** Core runtime
-* **LangChain / LlamaIndex:** For AI orchestration and RAG
+* **Web Framework:** Flask (a lightweight WSGI web application framework)
+* **Security/Middleware:** Flask-CORS to allow your Vercel frontend to make cross-origin requests to your PythonAnywhere backend
+* **Database:** SQLite3 (via the mandi_compare.db file) for storing crops, mandis, and pricing data.
+* **Hosting / Deployment:** PythonAnywhere (using WSGI to serve the Python app).
 
 ### AI Components
 * **Large Language Model:** OpenAI / Claude API (or local quantized models via Ollama)
