@@ -100,8 +100,6 @@ Our goal is to provide instant, affordable, and localized agricultural guidance 
 
 ## Technology Stack
 
-To ensure rapid development and seamless deployment during the hackathon, this project is built entirely in **Python**.
-
 ### Frontend & UI
 * Core: HTML5, Vanilla JavaScript, and Vanilla CSS. (No heavy frameworks like React or Tailwind are used, keeping it lightweight and fast)
 * Styling: CSS3 Custom Properties (variables), CSS Grid for the layout, and keyframe animations for the pulsating buttons
