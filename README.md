@@ -117,18 +117,14 @@ To ensure rapid development and seamless deployment during the hackathon, this p
 * **Python 3.10+:** Core runtime
 * **Web Framework:** Flask (a lightweight WSGI web application framework)
 * **Security/Middleware:** Flask-CORS to allow your Vercel frontend to make cross-origin requests to your PythonAnywhere backend
-* **Database:** SQLite3 (via the mandi_compare.db file) for storing crops, mandis, and pricing data.
 * **Hosting / Deployment:** PythonAnywhere (using WSGI to serve the Python app).
 
 ### AI Components
-* **Large Language Model:** OpenAI / Claude API (or local quantized models via Ollama)
-* **Vision Model:** OpenCV and PyTorch (or GPT-4V/Claude 3 Vision APIs)
 * **Speech-to-Text:** Whisper API (OpenAI)
 * **Text-to-Speech:** Google TTS (gTTS) or ElevenLabs API
 
 ### Database & Storage
-* **SQLite / PostgreSQL:** For storing user sessions, localized data, and chat history
-* **ChromaDB / FAISS:** Vector database for Retrieval-Augmented Generation (RAG) on agricultural documents
+* **Database:** SQLite3 (via the mandi_compare.db file) for storing crops, mandis, and pricing data.
 
 ---
 
@@ -139,7 +135,6 @@ Follow these steps to run the Streamlit application on your local machine.
 ### Prerequisites
 * Python 3.10 or higher installed
 * Git installed
-* API keys for your chosen LLM (OpenAI, Anthropic, etc.)
 
 ### Step-by-Step Guide
 
@@ -162,43 +157,3 @@ pip install -r requirements.txt
 Open your web browser and navigate to `http://localhost:8501`
 
 ---
-
-## AI Cost Strategy
-
-We scale based on Monthly Active Users (MAUs) to keep operations lean.
-
-| Active Users | Estimated Monthly Cost |
-| :--- | :--- |
-| 1,000 | $20 – $100 |
-| 10,000 | $200 – $1,000 |
-| 100,000 | $2,000 – $10,000 |
-| 1,000,000 | $20,000 – $100,000+ |
-
-**Cost Optimization Techniques:**
-* Use smaller LLMs for routine routing and common questions
-* Trigger expensive Vision models only upon explicit image upload
-* Cache frequently asked questions and weather data
-* Rely on RAG (Vector DB) to reduce token usage on massive context windows
-
----
-
-## System Architecture
-
-```text
-                    Agricultural Data Sources
-                    (Weather, Mandi Prices, Schemes)
-                               │
-       ┌───────────────────────┴───────────────────────┐
-       │                                               │
-   Web & Kiosks                                  Offline/Telecom
-       │                                               │
- Streamlit App ──────────────┐                   IVR / SMS Gateway
- (App.py)                    │                         │
-       │                     │                         │
-       └───────────────► Core Python Backend ◄─────────┘
-                         (LangChain / Logic)
-                               │
-       ┌───────────────────────┼───────────────────────┐
-       │                       │                       │
-  PostgreSQL / SQLite      Vision AI             Language AI
-  (User Data & Logs)    (Disease Detection)   (Chat & RAG Engine)
