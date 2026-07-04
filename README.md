@@ -19,7 +19,6 @@ India has over **263 million people engaged in agriculture**, but many farmers s
 * Language barriers
 * Low digital literacy
 * Poor internet connectivity in rural regions
-* Difficulty accessing reliable government schemes and farming recommendations
 
 Our goal is to provide instant, affordable, and localized agricultural guidance powered entirely by AI and accessible through multiple channels.
 
@@ -47,7 +46,6 @@ Instead of creating only a smartphone application, our solution works through mu
 * Image upload for disease detection
 * AI chatbot interface
 * Government schemes & crop advisory dashboards
-* Weather alerts integration
 
 ### 2. Voice Call (IVR)
 * Farmer speaks into a toll-free number
